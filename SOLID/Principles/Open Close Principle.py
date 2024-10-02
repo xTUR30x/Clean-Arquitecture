@@ -1,3 +1,0 @@
-#Open Colse Principle
-
-#Problem
