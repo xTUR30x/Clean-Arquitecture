@@ -2,22 +2,42 @@ from abc import ABC, abstractmethod
 
 class Product(ABC):
 
+    @property
     @abstractmethod
-    def get_id(self) -> int:
+    def id(self) -> int:
         pass
 
+    @id.setter
     @abstractmethod
-    def get_product_name(self) -> str:
+    def id(self, value: int) -> None:
         pass
 
+    @property
     @abstractmethod
-    def get_category_name(self) -> str:
+    def product_name(self) -> str:
         pass
 
+    @product_name.setter
     @abstractmethod
-    def get_price(self) -> float:
+    def product_name(self, value: str) -> None:
         pass
 
+    @property
     @abstractmethod
-    def set_price(self, price: float) -> None:
+    def category_name(self) -> str:
+        pass
+
+    @category_name.setter
+    @abstractmethod
+    def category_name(self, value: str) -> None:
+        pass
+
+    @property
+    @abstractmethod
+    def price(self) -> float:
+        pass
+
+    @price.setter
+    @abstractmethod
+    def price(self, value: float) -> None:
         pass

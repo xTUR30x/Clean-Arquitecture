@@ -2,30 +2,72 @@ from abc import ABC, abstractmethod
 
 class User(ABC):
 
+    @property
     @abstractmethod
-    def get_first_name(self) -> str:
+    def user_id(self) -> int:
         pass
 
+    @user_id.setter
     @abstractmethod
-    def get_last_name(self) -> str:
+    def user_id(self, value: int) -> None:
         pass
 
+    @property
     @abstractmethod
-    def get_password(self) -> str:
+    def first_name(self) -> str:
         pass
 
+    @first_name.setter
     @abstractmethod
-    def get_email(self) -> str:
+    def first_name(self, value: str) -> None:
         pass
 
+    @property
     @abstractmethod
-    def get_id(self) -> int:
+    def last_name(self) -> str:
         pass
 
+    @last_name.setter
     @abstractmethod
-    def set_password(self, new_password: str) -> None:
+    def last_name(self, value: str) -> None:
         pass
 
+    @property
     @abstractmethod
-    def set_email(self, new_email: str) -> None:
+    def password(self) -> str:
+        pass
+
+    @password.setter
+    @abstractmethod
+    def password(self, value: str) -> None:
+        pass
+
+    @property
+    @abstractmethod
+    def email(self) -> str:
+        pass
+
+    @email.setter
+    @abstractmethod
+    def email(self, value: str) -> None:
+        pass
+
+    @property
+    @abstractmethod
+    def money(self) -> float:
+        pass
+
+    @money.setter
+    @abstractmethod
+    def money(self, value: float) -> None:
+        pass
+
+    @property
+    @abstractmethod
+    def credit_card(self) -> str:
+        pass
+
+    @credit_card.setter
+    @abstractmethod
+    def credit_card(self, value: str) -> None:
         pass
